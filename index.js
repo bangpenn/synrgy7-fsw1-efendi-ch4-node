@@ -99,7 +99,7 @@ const data = [
     ]
 
 // Menuliskan data ke dalam file 'dummy.txt'
-writeToFile(dataToWrite, 'dummy.txt');
+writeToFile(data, 'dummy.txt');
 
 // Membaca data dari file 'dummy.txt'
 readFromFile('dummy.txt');
