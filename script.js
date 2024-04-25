@@ -1,11 +1,11 @@
-// app.js (atau nama file utama Anda)
-const { calculateCubeVolume, calculateCuboidVolume, calculateTriangularPrismVolume } = require('./volume');
+const { volumeKubus } = require('./kubus');
+const { volumeBalok } = require('./balok');
+const { volumePrisma } = require('./prisma');
 
-// Gunakan fungsi untuk menghitung volume
-const cubeVolume = calculateCubeVolume(5);
-const cuboidVolume = calculateCuboidVolume(3, 4, 5);
-const triangularPrismVolume = calculateTriangularPrismVolume(3, 4, 5);
+const kubus = volumeKubus(5);
+const balok = volumeBalok(3, 4, 5);
+const prisma = volumePrisma(3, 4, 5);
 
-console.log(`Volume of the cube: ${cubeVolume}`);
-console.log(`Volume of the cuboid: ${cuboidVolume}`);
-console.log(`Volume of the triangular prism: ${triangularPrismVolume}`);
+console.log(`Volume kubus: ${kubus}`);
+console.log(`Volume balok: ${balok}`);
+console.log(`Volume prisma segitiga: ${prisma}`);
