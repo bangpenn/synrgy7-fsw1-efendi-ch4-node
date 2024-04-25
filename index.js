@@ -34,6 +34,7 @@ fs.writeFileSync('./dummy.txt', `Volume Kubus: ${volumeInfo}`, { encoding: 'utf-
 
 const { writeToFile } = require('./write');
 const { readFromFile } = require('./read');
+const { detail } = require('./detail');
 
 const data = [
     {
@@ -99,10 +100,12 @@ const data = [
     ]
 
 // Menuliskan data ke dalam file 'dummy.txt'
-writeToFile(data, 'dummy.txt');
+// writeToFile(data, 'dummy.txt');
 
-// Membaca data dari file 'dummy.txt'
-readFromFile('dummy.txt');
+// // Membaca data dari file 'dummy.txt'
+// readFromFile('dummy.txt');
+
+detail(1, data);
 
 
 // memanipulasi data, write dan read index - txt - read,write
