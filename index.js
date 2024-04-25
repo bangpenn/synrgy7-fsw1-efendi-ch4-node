@@ -32,6 +32,9 @@ fs.writeFileSync('./dummy.txt', `Volume Kubus: ${volumeInfo}`, { encoding: 'utf-
 //     console.log(JSON.parse(data))
 // })
 
+const { writeToFile } = require('./write');
+const { readFromFile } = require('./read');
+
 const data = [
     {
         id: 1,
@@ -95,21 +98,11 @@ const data = [
       },
     ]
 
-fs.writeFileSync('dummy.txt', JSON.stringify(data), 'utf-8');
+// Menuliskan data ke dalam file 'dummy.txt'
+writeToFile(dataToWrite, 'dummy.txt');
 
-fs.readFile('dummy.txt', 'utf-8', (err, data) => {
-    if (err) {
-      console.error('Error reading file:', err);
-      return;
-
-    }
-
-    const parsedData = JSON.parse(data);
-  
-    console.log(parsedData);
-  });
-
-
+// Membaca data dari file 'dummy.txt'
+readFromFile('dummy.txt');
 
 
 // memanipulasi data, write dan read index - txt - read,write
