@@ -32,10 +32,7 @@ fs.writeFileSync('./dummy.txt', `Volume Kubus: ${volumeInfo}`, { encoding: 'utf-
 //     console.log(JSON.parse(data))
 // })
 
-const { writeToFile } = require('./write');
-const { readFromFile } = require('./read');
-const { detail } = require('./detail');
-
+const { writeToFile, readFromFile, detail, addData } = require('./people');
 const data = [
     {
         id: 1,
@@ -105,7 +102,15 @@ const data = [
 // // Membaca data dari file 'dummy.txt'
 // readFromFile('dummy.txt');
 
-detail(1, data);
+// detail(1, data);
 
+const newData = {
+    id: 11,
+    name: "John Doe",
+    username: "johndoe",
+    email: "john@example.com",
+  };
+
+  addData(data, newData)
 
 // memanipulasi data, write dan read index - txt - read,write
